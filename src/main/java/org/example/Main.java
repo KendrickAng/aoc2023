@@ -1,7 +1,9 @@
 package org.example;
 
+import com.google.common.base.Functions;
 import org.example.fileutils.FileUtils;
 import org.example.one.One;
+import org.example.three.Three;
 import org.example.two.Two;
 
 import java.io.IOException;
@@ -9,11 +11,12 @@ import java.nio.file.*;
 import java.util.Map;
 
 public class Main {
-    private static final int DAY = 2;
     private static final Map<Integer, Solver> SOLVERS = Map.of(
             1, One.SINGLETON,
-            2, Two.SINGLETON
+            2, Two.SINGLETON,
+            3, Three.SINGLETON
     );
+    private static final int DAY = SOLVERS.keySet().stream().mapToInt(x -> x).max().orElseThrow();
 
     public static void main(String[] args) {
         start();
