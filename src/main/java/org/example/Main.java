@@ -2,6 +2,7 @@ package org.example;
 
 import com.google.common.base.Functions;
 import org.example.fileutils.FileUtils;
+import org.example.five.Five;
 import org.example.four.Four;
 import org.example.one.One;
 import org.example.three.Three;
@@ -16,8 +17,10 @@ public class Main {
             1, One.SINGLETON,
             2, Two.SINGLETON,
             3, Three.SINGLETON,
-            4, Four.SINGLETON
+            4, Four.SINGLETON,
+            5, Five.SINGLETON
     );
+
     private static final int DAY = SOLVERS.keySet().stream().mapToInt(x -> x).max().orElseThrow();
 
     public static void main(String[] args) {
