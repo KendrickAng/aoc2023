@@ -5,12 +5,14 @@ import org.example.fileutils.FileUtils;
 import org.example.five.Five;
 import org.example.four.Four;
 import org.example.one.One;
+import org.example.six.Six;
 import org.example.three.Three;
 import org.example.two.Two;
 
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.Map;
+import java.util.Set;
 
 public class Main {
     private static final Map<Integer, Solver> SOLVERS = Map.of(
@@ -18,8 +20,11 @@ public class Main {
             2, Two.SINGLETON,
             3, Three.SINGLETON,
             4, Four.SINGLETON,
-            5, Five.SINGLETON
+            5, Five.SINGLETON,
+            6, Six.SINGLETON
     );
+
+    private static final Set<Integer> IGNORE = Set.of(5);
 
     private static final int DAY = SOLVERS.keySet().stream().mapToInt(x -> x).max().orElseThrow();
 
@@ -29,6 +34,10 @@ public class Main {
 
     private static void start() {
         for (int i = 1; i <= DAY; i++) {
+            if (IGNORE.contains(i)) {
+                System.out.println("Skipping day " + i);
+                continue;
+            }
 
             System.out.printf("########## DAY #%d ##########\n", i);
 
