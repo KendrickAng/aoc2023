@@ -1,6 +1,7 @@
 package org.example;
 
 import com.google.common.base.Functions;
+import org.example.eight.Eight;
 import org.example.fileutils.FileUtils;
 import org.example.five.Five;
 import org.example.four.Four;
@@ -23,7 +24,8 @@ public class Main {
             4, Four.SINGLETON,
             5, Five.SINGLETON,
             6, Six.SINGLETON,
-            7, Seven.SINGLETON
+            7, Seven.SINGLETON,
+            8, Eight.SINGLETON
     );
 
     private static final Set<Integer> IGNORE = Set.of(5);
