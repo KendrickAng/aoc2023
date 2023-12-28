@@ -5,6 +5,7 @@ import org.example.fileutils.FileUtils;
 import org.example.five.Five;
 import org.example.four.Four;
 import org.example.one.One;
+import org.example.seven.Seven;
 import org.example.six.Six;
 import org.example.three.Three;
 import org.example.two.Two;
@@ -21,7 +22,8 @@ public class Main {
             3, Three.SINGLETON,
             4, Four.SINGLETON,
             5, Five.SINGLETON,
-            6, Six.SINGLETON
+            6, Six.SINGLETON,
+            7, Seven.SINGLETON
     );
 
     private static final Set<Integer> IGNORE = Set.of(5);
