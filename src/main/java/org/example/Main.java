@@ -9,6 +9,7 @@ import org.example.nine.Nine;
 import org.example.one.One;
 import org.example.seven.Seven;
 import org.example.six.Six;
+import org.example.ten.Ten;
 import org.example.three.Three;
 import org.example.two.Two;
 
@@ -27,7 +28,8 @@ public class Main {
             6, Six.SINGLETON,
             7, Seven.SINGLETON,
             8, Eight.SINGLETON,
-            9, Nine.SINGLETON
+            9, Nine.SINGLETON,
+            10, Ten.SINGLETON
     );
 
     private static final Set<Integer> IGNORE = Set.of(5);
