@@ -2,6 +2,7 @@ package org.example;
 
 import com.google.common.base.Functions;
 import org.example.eight.Eight;
+import org.example.eleven.Eleven;
 import org.example.fileutils.FileUtils;
 import org.example.five.Five;
 import org.example.four.Four;
@@ -19,17 +20,18 @@ import java.util.Map;
 import java.util.Set;
 
 public class Main {
-    private static final Map<Integer, Solver> SOLVERS = Map.of(
-            1, One.SINGLETON,
-            2, Two.SINGLETON,
-            3, Three.SINGLETON,
-            4, Four.SINGLETON,
-            5, Five.SINGLETON,
-            6, Six.SINGLETON,
-            7, Seven.SINGLETON,
-            8, Eight.SINGLETON,
-            9, Nine.SINGLETON,
-            10, Ten.SINGLETON
+    private static final Map<Integer, Solver> SOLVERS = Map.ofEntries(
+            Map.entry(1, One.SINGLETON),
+            Map.entry(2, Two.SINGLETON),
+            Map.entry(3, Three.SINGLETON),
+            Map.entry(4, Four.SINGLETON),
+            Map.entry(5, Five.SINGLETON),
+            Map.entry(6, Six.SINGLETON),
+            Map.entry(7, Seven.SINGLETON),
+            Map.entry(8, Eight.SINGLETON),
+            Map.entry(9, Nine.SINGLETON),
+            Map.entry(10, Ten.SINGLETON),
+            Map.entry(11, Eleven.SINGLETON)
     );
 
     private static final Set<Integer> IGNORE = Set.of(5);
