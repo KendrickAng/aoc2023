@@ -73,12 +73,11 @@ public class Twelve implements Solver {
                 return 0;
             }
         } else if (gIdx >= groups.length) {
-            for (int i = sIdx; i < springs.length; i++) {
-                if (springs[i] == '#') {
-                    return 0;
-                }
+            if (String.valueOf(Arrays.copyOfRange(springs, sIdx, springs.length)).contains("#")) {
+                return 0;
+            } else {
+                return 1;
             }
-            return 1;
         }
 
         if (memo[sIdx][gIdx][contiguousBroken] == -1) {
@@ -115,7 +114,6 @@ public class Twelve implements Solver {
 
         return memo[sIdx][gIdx][contiguousBroken];
     }
-
 
     private String solve1() {
         long sum = 0;
