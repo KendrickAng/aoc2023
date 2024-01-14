@@ -11,6 +11,7 @@ import org.example.one.One;
 import org.example.seven.Seven;
 import org.example.six.Six;
 import org.example.ten.Ten;
+import org.example.thirteen.Thirteen;
 import org.example.three.Three;
 import org.example.twelve.Twelve;
 import org.example.two.Two;
@@ -33,7 +34,8 @@ public class Main {
             Map.entry(9, Nine.SINGLETON),
             Map.entry(10, Ten.SINGLETON),
             Map.entry(11, Eleven.SINGLETON),
-            Map.entry(12, Twelve.SINGLETON)
+            Map.entry(12, Twelve.SINGLETON),
+            Map.entry(13, Thirteen.SINGLETON)
     );
 
     private static final Set<Integer> IGNORE = Set.of(5);
