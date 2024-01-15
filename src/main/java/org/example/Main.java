@@ -3,6 +3,7 @@ package org.example;
 import com.google.common.base.Functions;
 import org.example.eight.Eight;
 import org.example.eleven.Eleven;
+import org.example.fifteen.Fifteen;
 import org.example.fileutils.FileUtils;
 import org.example.five.Five;
 import org.example.four.Four;
@@ -37,7 +38,8 @@ public class Main {
             Map.entry(11, Eleven.SINGLETON),
             Map.entry(12, Twelve.SINGLETON),
             Map.entry(13, Thirteen.SINGLETON),
-            Map.entry(14, Fourteen.SINGLETON)
+            Map.entry(14, Fourteen.SINGLETON),
+            Map.entry(15, Fifteen.SINGLETON)
     );
 
     private static final Set<Integer> IGNORE = Set.of(5);
